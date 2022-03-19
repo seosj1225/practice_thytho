@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.00.0/css/all.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/joinUs.css" />
+  </head>
+  <div id="wrap">
+    <%-include('header')%>
+    <main>
+      <section class="section1">
+        <div class="join"><h2>글쓰기</h2></div>
+        <form action="/freeboard/write?userid=<%-userid%>" method="post" class="writeform">
+            <p>
+                <label for="userid">아이디</label><input type="text" name="userid" id="userid" value="<%-userid%>" disabled>
+            </p>
+            <p>
+                <label for="title">제목</label><input type="text" name="title" id="title">
+            </p>
+            <p>
+                <label for="content">내용</label><textarea name="content" id="content"></textarea>
+            </p>
+            <div class="btn_line">
+                <button type="submit" class="btn_bbs">완료</button>
+                <button type="reset" class="btn_bbs">취소</button>
+            </div>
+        </form>
+		<!-- //bodytext_area -->
+      </section>
+    </main>
+</div>
+  <body></body>
+</html>

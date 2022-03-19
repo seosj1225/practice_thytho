@@ -1,6 +1,6 @@
 <header class="topArea">
     <div class="topLeft">
-        <div><a href="#"><img src="./img/logo.png" alt="띠또 로고"></a></img></div>
+        <div><a href="#"><img src="/img/logo.png" alt="띠또 로고"></a></img></div>
     </div>
     <div class="topCenter">
         <ul class="depth1">
@@ -19,7 +19,7 @@
             </li>
             <li><a href="#">COMMUNITY</a>
                 <ul class="depth2">
-                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="/freeboard/list?pagenum=1&page_group_num=1">NOTICE</a></li>
                     <li><a href="#">REVIEW</a></li>
                     <li><a href="#">Q&A</a></li>
                     <li><a href="#">EVENT</a></li>
@@ -33,7 +33,15 @@
                     <li><a href="#">CART 0</a></li>
                 </ul>
             </li>
+            
             <li><a href="#">CART</a></li>
+            <% if (loggedIn) {  %> 
+                <li>
+                    <a href="#"><%= userid %></a>
+                    <ul class="depth2">
+                        <a href="/users/logout">로그아웃</a></li>
+                    </ul>
+            <% } %>
         </ul>
     </div>
     <div class="topRight">
@@ -43,7 +51,7 @@
                 <legend>검색</legend>
                 <label for="search">search</label>
                 <input type="text" id="search">
-                <input type="image" src="./img/pc_searchicon.png" class="searchIcon">
+                <input type="image" src="/img/pc_searchicon.png" class="searchIcon">
             </fieldset>
         </form>
     </div>

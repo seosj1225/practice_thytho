@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.00.0/css/all.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/joinUs.css" />
+  </head>
+  <div id="wrap">
+    <%-include('header')%>
+    <main>
+      <section class="section1">
+        <div class="join"><h2>글쓰기</h2></div>
+        <div class="bodytext_area row">
+			<form action="#" class="minisrch_form">
+				<fieldset>
+					<legend>검색</legend>
+					<input type="text" class="tbox" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요">
+					<button type="submit" class="btn_srch">검색</button>
+				</fieldset>
+			</form>
+			<table class="bbsListTbl">
+				<caption class="blind">공지사항  목록</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">제목</th>
+						<th scope="col">작성자</th>
+						<th scope="col">조회수</th>
+						<th scope="col">작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 
+						total_record : 전체 게시글수
+						page : 게시판 페이지 번호
+						scale : 1페이지당 보여질 게시글 수 
+
+						start = (page-1)*scale;  (전체 레코드에서 각 페이지에 보여질 첫번째 레코드를 의미)
+						last = page*scale;       (전체 레코드에서 각 페이지에 보여질 마지막 레코드를 의미)
+						(마지막페이지는 레코드가 10개 미만이므로 last 조건만 주면 존재하지 않는 레코드까지 접근하게 돼서 오류 발생
+						 그래서 total_record 조건을 추가하여 문제해결)
+					-->
+					<%
+						var total_record = data.length;
+						var page = pagenum
+						var pgn = page_group_num
+						var scale = 10;
+						var total_page = Math.ceil(total_record/scale)
+					    var tpgn = Math.ceil(total_page/scale)
+
+
+						var start = (page-1)*scale;  
+						var last = page*scale;
+						var number = total_record - start
+					 %>
+
+					<% for (let i=start; i<last && i<total_record; i++) { %>
+						<tr>
+							<td><%= number %></td>
+							<td class="tit_notice"><a href="/freeboard/view?idnum=<%- data[i].idnum %>&pagenum=<%-page%>&hit=<%- data[i].hit %>&page_group_num=<%-pgn%>"><%= data[i].title %></a> </td>
+							<td><%= data[i].userid %></td>
+							<td><%= data[i].hit %></td>
+							<td><%= data[i].wdate %></td>
+						</tr>
+					<% 
+						number--
+						} 
+					%>
+					
+					
+				</tbody>
+			</table>
+
+			<% if (loggedIn) { %>
+				<p class="btn_line">
+					<a href="/freeboard/write?pagenum=<%-page%>&page_group_num=<%-pgn%>" class="btn_bbs">글쓰기</a>
+				</p>
+			<% } %>
+
+			<!-- pagination -->
+			<div class="pagination">
+				<a href="/freeboard/pagegroup?page_group_num=1&direct=1" class="firstpage  pbtn"><img src="/img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
+
+				<%
+				if (pgn!=1) {
+				%>
+					<a href="/freeboard/pagegroup?page_group_num=<%-pgn%>&direct=1" class="prevpage  pbtn"><img src="/img/btn_prevpage.png" alt="이전 페이지그룹으로 이동"></a>
+				<%
+				}
+				%>
+				
+				<%
+				for (let i=pgn*10-9; i<=pgn*10 && i<=total_page; i++) {
+					if (page==i) {
+				%>
+						<a href="/freeboard/list?pagenum=<%-i%>&page_group_num=<%-pgn%>"><span class="pagenum currentpage"><%=i%></span></a>
+				<%
+					} else {
+				%>
+						<a href="/freeboard/list?pagenum=<%-i%>&page_group_num=<%-pgn%>"><span class="pagenum"><%=i%></span></a>
+				<%
+					}
+				}
+				%>
+
+				<%
+				if (pgn!=tpgn) {
+				%>
+					<a href="/freeboard/pagegroup?page_group_num=<%-pgn%>&total_page_group_num=<%-tpgn%>&direct=2&total_page=<%-total_page%>" class="nextpage  pbtn"><img src="/img/btn_nextpage.png" alt="다음 페이지그룹으로 이동"></a>
+				<%
+				}	
+				%>
+
+				<a href="/freeboard/pagegroup?page_group_num=<%-tpgn%>&total_page_group_num=<%-tpgn%>&direct=2&total_page=<%-total_page%>" class="lastpage  pbtn"><img src="/img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
+
+			</div>
+			<!-- //pagination -->
+			
+		</div>
+		<!-- //bodytext_area -->
+      </section>
+    </main>
+</div>
+  <body></body>
+</html>
