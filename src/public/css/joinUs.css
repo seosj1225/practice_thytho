@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
+
+body {
+  font-family: "Red Hat Mono", monospace;
+}
+
+/* header start */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 5px 0 12px rgb(199, 199, 199);
+  z-index: 99999;
+}
+.topArea {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+}
+.topArea > div {
+  padding: 30px;
+}
+
+.topCenter {
+  margin: 5px 0;
+}
+.topCenter > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.topCenter .depth1 > li {
+  height: 55px;
+  letter-spacing: -1px;
+  padding-left: 55px;
+}
+.topCenter .depth1 > li:hover > a {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.topCenter .depth1 > li:hover .depth2 {
+  display: block;
+}
+.topCenter .depth1 > li:nth-child(1) {
+  padding-left: 150px;
+}
+.topCenter .depth2 {
+  background: #fff;
+  color: black;
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+.topCenter .depth2 > li:first-child {
+  border-top: 1px solid #000;
+}
+.topCenter .depth2 > li {
+  width: 140px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+.topCenter .depth2 > li:hover > a {
+  color: lightslategray;
+}
+.topCenter .depth2 > li:hover {
+  background: rgb(246, 246, 246);
+}
+.topCenter .depth2 > li > a {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+}
+
+legend {
+  display: none;
+}
+.topRight fieldset {
+  border: 1px solid #000;
+  border-radius: 50px;
+  height: 35px;
+  padding-top: 6px;
+}
+.topRight label {
+  letter-spacing: -1px;
+  padding: 15px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.topRight input {
+  border: none;
+  padding-right: 15px;
+}
+
+.topRight #search {
+  width: 100px;
+}
+.topRight .searchIcon:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/* header finish */
+
+/* section1 start */
+.section1 {
+  width: 1600px;
+  margin: 0 auto;
+}
+.section1 > .join {
+  margin-top: 240px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+}
+.section1 > .join > h2 {
+  margin-bottom: 35px;
+}
+.section1 > form > .fillIn > table {
+  border: 1px solid lightgray;
+  margin-top: 10px;
+}
+.section1 > form > .fillIn > table > colgroup > col:first-child {
+  width: 150px;
+}
+.section1 > form > .fillIn > table > tbody > tr {
+  font-size: 12px;
+  text-align: left;
+}
+.section1 > form > .fillIn > table > tbody > tr > th {
+  background-color: #fbfafa;
+  padding: 11px 0 10px 18px;
+}
+.section1 > form > .fillIn > table > tbody > tr > th,
+td {
+  height: 40px;
+  border: 1px solid lightgray;
+}
+.section1 > form > .fillIn > table > tbody > tr > td {
+  padding: 8px 10px 7px;
+  line-height: 24px;
+}
+.section1 > form > .fillIn > table > tbody > tr > td > input {
+  padding: 2px 4px;
+  border: 1px solid lightgray;
+}
+.section1 > form > .fillIn > table > tbody > tr > td > select {
+  padding: 1px 20px;
+  border: 1px solid lightgray;
+}
+
+.section1 > form > .joinBtn {
+  margin-top: 10px;
+  text-align: center;
+}
+.section1 > form > .joinBtn > button {
+  background: #444;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  padding: 10px 8px;
+}
+
+/* section1 finished */

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index.html</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.1/css/all.css"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/jquery-1.12.4.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <%-include('header')%>
+      <main>
+        <section class="section1">
+          <div id="img1">
+            <img src="./img/01.jpg" alt="메인사진" />
+          </div>
+          <div id="img2" class="hide">
+            <img src="./img/02.jpg" alt="메인사진" />
+          </div>
+          <div id="img3" class="hide">
+            <img src="./img/03.jpg" alt="메인사진" />
+          </div>
+          <ol>
+            <li><button onclick="changeImg(1)">1</button></li>
+            <li><button onclick="changeImg(2)">2</button></li>
+            <li><button onclick="changeImg(3)">3</button></li>
+          </ol>
+        </section>
+        <section class="section2">
+          <div class="brand">
+            <h2>SUMMER SEASON</h2>
+            <p>
+              You know you can call me if you need someone<br />
+              I need you to hold on<br />
+              Heaven is a place not too far away<br />
+              We all know I should be the one to say we all make mistakes<br />
+            </p>
+          </div>
+        </section>
+        <section class="section3">
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <div>
+                    <img src="./img/Tban01.jpg" alt="제품1" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div>
+                    <img src="./img/Tban02.jpg" alt="제품2" />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section4">
+          <div>
+            <div class="row1">
+              <h2>Weekly Best</h2>
+              <div class="plus">
+                <a href="#"> <i class="fas fa-plus"></i> 더보기 </a>
+              </div>
+            </div>
+
+            <div>
+              <ul class="row2">
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 01.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div class="oriP">88,000원</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 02.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 03.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="row3">
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 01.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div class="oriP">88,000원</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 02.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div>88,000원</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="sampleImg">
+                    <a href="#">
+                      <img
+                        src="./img/thytho sample item 03.jpg"
+                        alt="sample1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">thytho sample item 01</a>
+                  </div>
+                  <div>Dance with me under the diamonds</div>
+                  <div>88,000원</div>
+                  <div>79,000원</div>
+                  <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_1.png" alt="아이콘1"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_2.png" alt="아이콘2"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_3.png" alt="아이콘3"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_4.png" alt="아이콘4"
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./img/icon_5.png" alt="아이콘5"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer">
+          <div>
+            <h3>Info</h3>
+            <ul>
+              <li>
+                <span>상호</span
+                >thytho<span>대표</span>띠또<span>전화</span>070-0000-0000
+              </li>
+              <li>
+                <span>주소</span>06163 서울특별시 강남구 삼성로108길 19 (삼성동)
+                태형 1층
+              </li>
+              <li>
+                <span>사업자 등록번호</span>000-00-00000<span
+                  >통신판매업 신고</span
+                >신고준비중
+              </li>
+              <li><span>개인정보보호책임자</span>띠또(abc@abc.om)</li>
+              <li>&copy; 2021 thytho. All rights reserved.</li>
+            </ul>
+          </div>
+          <div></div>
+          <div></div>
+          Info.
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/index.js"></script>
+  </body>
+</html>

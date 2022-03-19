@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.00.0/css/all.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/joinUs.css" />
+  </head>
+  <div id="wrap">
+    <%-include('header')%>
+    <main>
+      <section class="section1">
+        <div class="join"><h2>회원 가입</h2></div>
+        <form action="/users/register" method="post" >
+          <div class="fillIn">
+            <table>
+              <colgroup>
+              <col /><col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>아이디</th>
+                  <td>
+                    <input type="text" name="userid">
+                    (영문소문자/숫자, 4~16자)
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    비밀번호
+                  </th>
+                  <td>
+                    <input type="text" name="pwd">
+                    (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    비밀번호 확인
+                  </th>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    이름
+                  </th>
+                  <td>
+                    <input type="text" name="irum">
+  
+                  </td>
+                </tr>
+                <tr>
+                  <th>휴대전화</th>
+                  <td>
+                    <input type="text" name="phone"/>
+                    <!-- <select>
+                      <option>010</option>
+                      <option>011</option>
+                      <option>017</option>
+                    </select>
+                    <span> - </span>
+                    <input type="text">
+                    <span> - </span>
+                    <input type="text"> -->
+                  </td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>
+                    <input type="text" name="email"/>
+                    <!-- <input type="text">
+                    <span>@</span>
+                    <input type="text">
+                    <select>
+                      <option>직접입력</option>
+                      <option>네이버</option>
+                      <option>지메일</option>
+                      <option>다음</option>
+                    </select> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="joinBtn"><button type="submit">회원가입</button></div>
+        <form>
+      </section>
+    </main>
+</div>
+  <body></body>
+</html>

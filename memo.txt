@@ -1,0 +1,24 @@
+router 분류하기
+
+<global router>
+/ -> Home
+/join -> Join           (회원가입 화면)
+/login -> Login(login)  (로그인 화면)
+/login -> loging        (로그인진행)
+/freeboard -> Free Board (자유게시판)
+
+<user router>
+/users/edit -> Edit User  (회원 정보수정 화면)
+/users/editing -> editing (회원정보수정 진행)
+/users/memberout -> Remove User (회원 탈퇴 진행)
+/users/register -> Register User (회원가입 진행)
+/users/logout -> Logout User (로그아웃 진행 : 로그아웃 메뉴와 회원정보삭제에서 요청됨)
+/users/idchk -> Id Check User (아이디중복체크진행)
+
+
+<FreeBoard router>
+/freeboard/list -> Free Board List (자유게시판 전체 목록 화면)
+/freeboard/view -> Read Post (게시글 상세보기 페이지) 
+/freeboard/edit -> Edit Post (게시글 수정 페이지)
+/freeboard/remove -> Remove Post (게시글 삭제)
+/freeboard/write -> Write Post (게시글 작성 페이지)
